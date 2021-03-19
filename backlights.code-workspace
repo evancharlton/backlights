@@ -1,0 +1,9 @@
+{
+  "folders": [
+	{ "path": ".github" },
+	{ "path": "firebase.json" },
+	{ "path": "firmware" },
+	{ "path": "frontend" }
+  ],
+  "settings": {}
+}
