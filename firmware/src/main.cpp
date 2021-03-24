@@ -2,11 +2,10 @@
 
 #include <Arduino.h>
 #include <FastLED.h>
-#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
+#include <WiFiManager.h>
 #include <FirebaseESP8266.h>
 #include "config.h"
 
-// How many leds in your strip?
 #define NUM_LEDS_PER_MONITOR 4
 
 // #define COLOR_MODE BRG
