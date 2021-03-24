@@ -6,10 +6,10 @@
 #include <FirebaseESP8266.h>
 #include "config.h"
 
-#define NUM_LEDS_PER_MONITOR 4
+#define NUM_LEDS_PER_MONITOR 9
 
-// #define COLOR_MODE BRG
-#define COLOR_MODE GRB
+#define COLOR_MODE BRG
+// #define COLOR_MODE GRB
 
 #define DATA_PIN 5
 
