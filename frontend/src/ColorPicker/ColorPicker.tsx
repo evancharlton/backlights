@@ -19,7 +19,7 @@ const ColorPicker = ({ rgb, onRgbChanged, width, height }: Props) => {
     >
       <ReactColorPicker
         width={width}
-        height={height}
+        height={height - 44}
         color={color}
         onChange={(newColor) => {
           const { hex } = newColor;
