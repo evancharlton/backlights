@@ -9,6 +9,12 @@ information.
 
 ## In action
 
+It's currently [deployed live][url]. It's open to the public, but if I find
+it to be abused or misused (or decide that I want the colors to be meaningful)
+then I'll lock it down. But until then: have fun!
+
+[url]: https://aurora-backlights.web.app/
+
 Since only I can see it in action, here's some pictures to show it off. The
 pictures were taken in darker-than-normal settings, so the effect is a bit
 more exaggerated than it would normally be seen, but hey.
