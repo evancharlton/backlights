@@ -34,6 +34,7 @@ const ColorPicker = ({ rgb, onRgbChanged, width, height }: Props) => {
         hideHEX
         hideHSB
         hideRGB
+        dark
       />
     </div>
   );
