@@ -15,7 +15,12 @@ const ColorPicker = ({ rgb, onRgbChanged, width, height }: Props) => {
   return (
     <div
       className={classes.container}
-      style={{ backgroundColor: rgb, width, height }}
+      style={{
+        backgroundColor: rgb,
+        width,
+        height,
+        boxShadow: `0px 0px 50px ${rgb}`,
+      }}
     >
       <ReactColorPicker
         width={width}
