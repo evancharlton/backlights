@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+function usage() {
+  >&2 echo "Usage: $0 <left|right> [rgb | rgba]"
+  exit 1
+}
+
+HOST="${HOST:-aurora-backlights-default-rtdb.europe-west1.firebasedatabase.app}"
+
+MONITOR=${1}
+case $MONITOR in
+  left) ;;
+  right) ;;
+  *) usage ;;
+esac
+
+COLOR=${2}
+if [[ $COLOR == "" ]]; then
+  URL="https://${HOST}/rgba/${MONITOR}.json"
+  COLOR="#$(curl -s "${URL}" | sed 's/"//g')"
+  echo $COLOR
+  exit 0
+fi
+
+LEN=$(echo -n $COLOR | wc -c | sed 's/ //g')
+if [[ $LEN -ne 6 && $LEN -ne 8 ]]; then
+  usage
+fi
+
+if [[ $LEN -eq 6 ]]; then
+  COLOR="${COLOR}ff"
+fi
+
+URL="https://${HOST}/rgba/.json"
+DATA="{\"$MONITOR\": \"$COLOR\"}"
+curl -s -X PATCH -d "${DATA}" "${URL}" > /dev/null
