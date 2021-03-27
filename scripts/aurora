@@ -17,8 +17,7 @@ esac
 COLOR=${2}
 if [[ $COLOR == "" ]]; then
   URL="https://${HOST}/rgba/${MONITOR}.json"
-  COLOR="#$(curl -s "${URL}" | sed 's/"//g')"
-  echo $COLOR
+  curl -s "${URL}" | sed 's/"//g'
   exit 0
 fi
 
