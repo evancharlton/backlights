@@ -19,7 +19,7 @@ const ColorPicker = ({ rgb, onRgbChanged, width, height }: Props) => {
         backgroundColor: rgb,
         width,
         height,
-        boxShadow: `0px 0px 50px ${rgb}`,
+        boxShadow: `0px 0px 100px ${rgb}`,
       }}
     >
       <ReactColorPicker
